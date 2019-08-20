@@ -1,12 +1,12 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
-import Container from "../../../shared/layout/Container";
-import Loader from "../../../shared/misc/Loader";
-import ErrorMessage from "../../../shared/typography/ErrorMessage";
-import PageTitle from "../../../shared/typography/PageTitle";
-import Table from "../../../shared/typography/Table";
-import Button from "../../../shared/navigation/Button";
+import Container from "../../shared/layout/Container";
+import Loader from "../../shared/misc/Loader";
+import ErrorMessage from "../../shared/typography/ErrorMessage";
+import PageTitle from "../../shared/typography/PageTitle";
+import Table from "../../shared/typography/Table";
+import Button from "../../shared/navigation/Button";
 import Language from './shared/Language';
 
 export const COUNTRY_DETAIL_QUERY = gql`

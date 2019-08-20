@@ -4,7 +4,7 @@ import renderer from "react-test-renderer";
 import Loader from "../../../shared/misc/Loader";
 import ErrorMessage from "../../../shared/typography/ErrorMessage";
 import Continent from "../shared/Continent";
-import Countries, { COUNTRY_LIST_QUERY } from "../";
+import Countries, { COUNTRY_LIST_QUERY } from "../Countries";
 
 jest.mock("react-router-dom", () => ({
 	Link: p => <a {...p} />,

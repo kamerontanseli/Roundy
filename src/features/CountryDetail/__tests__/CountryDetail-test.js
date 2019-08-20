@@ -1,20 +1,20 @@
 import React from "react";
 import { MockedProvider } from "@apollo/react-testing";
 import renderer from "react-test-renderer";
-import Loader from "../../../../shared/misc/Loader";
-import ErrorMessage from "../../../../shared/typography/ErrorMessage";
+import Loader from "../../../shared/misc/Loader";
+import ErrorMessage from "../../../shared/typography/ErrorMessage";
 import Language from '../shared/Language';
-import CountriesDetail, { COUNTRY_DETAIL_QUERY } from "../";
+import CountryDetail, { COUNTRY_DETAIL_QUERY } from "../CountryDetail";
 
 jest.mock("react-router-dom", () => ({
 	Link: p => <a {...p} />
 }));
 
-describe("CountriesDetail", () => {
+describe("CountryDetail", () => {
 	it("should render loading when loading", () => {
 		const render = renderer.create(
 			<MockedProvider mocks={[]} addTypename={false}>
-				<CountriesDetail match={{ params: { code: "AO" } }} />
+				<CountryDetail match={{ params: { code: "AO" } }} />
 			</MockedProvider>
 		);
 
@@ -32,7 +32,7 @@ describe("CountriesDetail", () => {
 
 		const render = renderer.create(
 			<MockedProvider mocks={[mock]} addTypename={false}>
-				<CountriesDetail match={{ params: { code: "AO" } }} />
+				<CountryDetail match={{ params: { code: "AO" } }} />
 			</MockedProvider>
 		);
 
@@ -75,7 +75,7 @@ describe("CountriesDetail", () => {
 
 		const render = renderer.create(
 			<MockedProvider mocks={[mock]} addTypename={false}>
-				<CountriesDetail match={{ params: { code: "AO" } }} />
+				<CountryDetail match={{ params: { code: "AO" } }} />
 			</MockedProvider>
 		);
 
